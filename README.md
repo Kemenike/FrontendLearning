@@ -1,2 +1,2 @@
 # FrontendLearning
-My reference guides and coursework for Frontend Dev
+My reference guides and coursework for Frontend Development
