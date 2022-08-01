@@ -1,11 +1,11 @@
-/* 
-    Applies affect to everything. 
+ 
+/*    Applies affect to everything. */
 
 *{
     margin:0;
     padding:0;
     border:0;
-} */ 
+}
 
 body {
     background-color: #f4f4f4;
@@ -23,6 +23,10 @@ body {
     */
 }
 
+.clr{
+    clear:both;
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -35,13 +39,22 @@ a:hover {
 a:active {
     color:green;
 }
-a:visited {
-    color:black;
-}
 
 .container {
     width:80%;
     margin:auto;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    padding:10px 15px;
+    border:none;
+}
+
+.button:hover {
+    background:red;
+    color: #fff;
 }
 
 .box-1 {
@@ -89,10 +102,11 @@ a:visited {
     padding: 10px;
     border-radius: 15px;
 }
-
-.categories ul {
+ .categories ul {
     padding: 0;
+    padding-left: 20px;
     list-style: none; /* Removes Bullet Points */ 
+
 }
 .categories li {
     padding-bottom: 8px;
@@ -118,8 +132,86 @@ a:visited {
 .my-form input[type="text"], .my-form textarea {
     padding:8px;
     width:100%;
-    background-color: #333;
+    background-color: #fff;
     color: #fff;
     padding: 10px 15px;
 
+}
+
+.block{
+    float:left;
+    width:33.3%;
+    border:1px solid;
+    padding:10px;
+
+    /* This controls the width and height of an element.
+            Tells the browser to account for border and padding when calculaing the size*/ 
+    box-sizing: border-box;
+}
+
+#main-block {
+    float:left;
+    width:70%;
+    padding:15px;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    float:right;
+    width: 30%;
+    padding:15px;
+    background-color: #333;
+    color: #fff;
+    box-sizing: border-box;
+
+}
+
+.p-box {
+    width: 800px;
+    height:500px;
+    border:1px solid #000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    Position:relative;
+    background-image: url('../images/jhinbackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 800px 500px;
+}
+
+.p-box h1 {
+    color:#fff;
+    position: absolute;
+    top:100px;
+    left: 200px;
+}
+
+.p-box h2 {
+    color:#fff;
+    position:absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.fix-me {
+    position: fixed;
+    top: 400px;
+    left:0%;
+}
+
+.my-list li:first-child{
+    background:blue;
+}
+
+.my-list li:last-child{
+    background:purple;
+}
+
+.my-list li:nth-child(5){
+    background:grey;
+
+}
+
+.my-list li:nth-child(even){
+    background:blueviolet;
 }
