@@ -118,7 +118,7 @@ nav {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    max-width: 700;
+    max-width: 700px;
     margin: 0 auto;
     margin-bottom: 48px;
     text-align: center;
@@ -219,6 +219,11 @@ nav {
 
 /* Project Segment */
 
+#projects {
+    width: 100%;
+    height: 100%;
+}
+
 .project__img {
     width: 100%;
     height: 100%;
@@ -227,10 +232,13 @@ nav {
 
 .project__wrapper {
     display: flex;
+    max-height: 50vh;
+    max-width: 60%;
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    margin: 0 auto;
 }
 
 .project__wrapper:before {
