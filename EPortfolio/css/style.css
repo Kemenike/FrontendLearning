@@ -31,6 +31,10 @@ a {
     position: relative;
 }
 
+em:hover {
+    opacity: 0.7;
+}
+
 li {
     list-style-type: none;
 }
@@ -168,6 +172,21 @@ nav {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
     margin-bottom: 28px;
     background-color: #444dcd;
+    animation: animate-profile-pic 650ms 200ms backwards ease;
+}
+
+@keyframes animate-profile-pic {
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .about-me__picture {
@@ -178,12 +197,14 @@ nav {
 
 .about-me__info--title{
     margin-bottom: 16px;
+    animation: fade-up 650ms 200ms ease backwards;
 }
 
 .about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
     text-align: center;
+    animation: fade-up 650ms 450ms ease backwards;
 }
 
 .about-me__link {
@@ -191,12 +212,44 @@ nav {
     color: #444dcd;
     text-decoration: none;
     padding: 0 16px;
+    animation: fade-up 650ms 700ms ease backwards;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.emoji {
+    display: inline-block;
+    animation: animate-emoji 2.5s infinite linear;
+}
+
+@keyframes animate-emoji{
+    0% {
+        transform: rotateY(0);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
 }
 
 .about-me__img--container {
     flex: 1;
     display: flex;
     align-items: center;
+    animation: fade-up 650ms 1.2s ease backwards;
 }
 
 .about-me__img {
@@ -407,6 +460,8 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Large Phones and other devices */
+
 @media (max-width: 768px) {
     nav {
         height: 68px;
@@ -436,6 +491,8 @@ footer {
 
 }
 
+/* Small Phones */ 
+
 @media (max-width: 480px) {
     nav {
         height: 68px;
@@ -457,6 +514,12 @@ footer {
         width: calc(100%/3);
     }
 
+    .project__description {
+        padding: 0;
+        left: 0;
+        width: 100%;
+    }
+
     .project__description--para {
         display: none;
     }
@@ -471,9 +534,15 @@ footer {
         justify-content: center;
     }
 
-    .project__description--sub-title {
-        margin: 12px 0;
+    .project__description--title {
+        font-size: 32px;
+        line-height: 1;
+        text-align: center;
     }
 
-    1:18:21
+    .project__description--sub-title {
+        margin: 12px 0;
+        text-align: center;
+    }
+
 }
