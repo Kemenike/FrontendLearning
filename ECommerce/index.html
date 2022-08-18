@@ -8,29 +8,41 @@
     <title>Library</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/31549eab80.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
     <section id="landing">
         <nav>
             <div class="nav__container">
-
                 <img class="logo" src="./assets/Library.svg" alt="">
                 <ul class="nav__links">
                     <li>
                         <a href="#" class="nav__link">Home</a>
-                        <a href="#" class="nav__link">Contact</a>
-                        <a href="#" class="nav__link nav__link--primary">Books</a>
+                        <a href="#" class="nav__link no-cursor">Contact</a>
+                        <a href="#featured" class="nav__link nav__link--primary">Books</a>
                     </li>
                 </ul>
-            </div>
-            <button class="btn__menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="menu__backdrop">
-                <button class="btn__menu btn__menu--close">
-                    <i class="fas fa-times"></i>
+                <button class="btn__menu" onclick="openMenu()">
+                    <em class="fas fa-bars"></em>
                 </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu--close" onclick="closeMenu()">
+                        <em class="fas fa-times"></em>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#featured" class="menu__link" onclick="closeMenu()">Books</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link 
+                        no-cursor" onclick="closeMenu()">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <header>
@@ -38,7 +50,9 @@
                 <div class="header__description">
                     <h1>United States' best online library platform</h1>
                     <h2>Find your dream book with <span class="purple">Library</span></h2>
-                    <button class="btn">Browse Books</button>
+                    <a href="#featured">
+                        <button class="btn">Browse Books</button>
+                    </a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./assets/Undraw_Books.svg" alt="">
@@ -173,12 +187,12 @@
                     <div class="section__title">
                         <h2>
                             Recent <span class="purple">Releases</span>
-                        </h2>   
+                        </h2>
                     </div>
                     <div class="books">
                         <div class="book">
                             <figure class="book__img--wrapper">
-                                <img src="./assets/book-1.jpeg" alt="">
+                                <img src="./assets/book-1.jpeg" class="book__img" alt="">
                             </figure>
                             <div class="book__title">
                                 The 10x Rule
@@ -196,7 +210,7 @@
                         </div>
                         <div class="book">
                             <figure class="book__img--wrapper">
-                                <img src="./assets/book-2.jpeg" alt="">
+                                <img src="./assets/book-2.jpeg" class="book__img" alt="">
                             </figure>
                             <div class="book__title">
                                 Be Obsessed or Be Average
@@ -214,7 +228,7 @@
                         </div>
                         <div class="book">
                             <figure class="book__img--wrapper">
-                                <img src="./assets/book-3.jpeg" alt="">
+                                <img src="./assets/book-3.jpeg" class="book__img" alt="">
                             </figure>
                             <div class="book__title">
                                 Rich Dad Poor Dad
@@ -232,7 +246,7 @@
                         </div>
                         <div class="book">
                             <figure class="book__img--wrapper">
-                                <img src="./assets/book-4.jpeg" alt="">
+                                <img src="./assets/book-4.jpeg" class="book__img" alt="">
                             </figure>
                             <div class="book__title">
                                 Cashflow Quadrant
@@ -250,7 +264,7 @@
                         </div>
                         <div class="book">
                             <figure class="book__img--wrapper">
-                                <img src="./assets/book-5.jpeg" alt="">
+                                <img src="./assets/book-5.jpeg" class="book__img" alt="">
                             </figure>
                             <div class="book__title">
                                 Power
@@ -268,7 +282,7 @@
                         </div>
                         <div class="book">
                             <figure class="book__img--wrapper">
-                                <img src="./assets/book-6.jpeg" alt="">
+                                <img src="./assets/book-6.jpeg" class="book__img" alt="">
                             </figure>
                             <div class="book__title">
                                 The 5 Second Rule
@@ -286,7 +300,7 @@
                         </div>
                         <div class="book">
                             <figure class="book__img--wrapper">
-                                <img src="./assets/book-7.jpg" alt="">
+                                <img src="./assets/book-7.jpg" class="book__img" alt="">
                             </figure>
                             <div class="book__title">
                                 Your Next Five Moves
@@ -304,7 +318,7 @@
                         </div>
                         <div class="book">
                             <figure class="book__img--wrapper">
-                                <img src="./assets/book-8.jpeg" alt="">
+                                <img src="./assets/book-8.jpeg" class="book__img" alt="">
                             </figure>
                             <div class="book__title">
                                 Mastery
@@ -329,7 +343,7 @@
                 <div class="row row__column">
                     <h2>Explore More <span class="purple">Books</span></h2>
                     <a href="#featured">
-                        <button class = "btn">Browse Books</button>
+                        <button class="btn">Browse Books</button>
                     </a>
                 </div>
             </div>
@@ -344,7 +358,7 @@
                     </figure>
                 </a>
                 <div class="footer__links">
-                    <a href="" class="footer__link">Home</a>
+                    <a href="#" class="footer__link">Home</a>
                     <a href="" class="footer__link no-cursor">About</a>
                     <a href="#featured" class="footer__link">Books</a>
                     <a href="" class="footer__link no-cursor">Contact</a>

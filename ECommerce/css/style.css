@@ -101,6 +101,68 @@ img {
     border-radius: 4px;
 }
 
+/* Burger */ 
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    display: none;
+    color: #7342d6;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 300ms ease, visibility 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn__menu--close {
+    background-color: transparent;
+    font-size: 40px;
+    border: none;
+    position:absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: #fff;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu__link {
+    font-size: 40px;
+    color: #fff;
+}
+
 #landing {
     background-color: rgba(115, 66, 214, 0.1)
 }
@@ -199,6 +261,7 @@ button:active {
 
 .highlight__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .highlight__img {
@@ -223,6 +286,7 @@ button:active {
 .highlight__subtitle {
     padding-top: 24px;
     padding-bottom: 16px;
+    text-align: center;
 }
 
 .highlight {
@@ -231,7 +295,6 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 /* Featured */
@@ -243,6 +306,8 @@ button:active {
 
 .books {
     display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
 }
 
 .book {
@@ -334,3 +399,47 @@ footer {
     padding: 0 8px;
 }
 
+/* Tablet */
+@media (max-width: 768px) {
+    .header__description {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .book {
+        width: 50%;
+    }
+
+}
+
+
+/* Phones */
+
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .highlight {
+        width: 100%;
+    }
+
+    .highlight:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
