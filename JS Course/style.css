@@ -1,0 +1,11 @@
+* {
+    transition: all 300ms ease;
+}
+
+.red {
+    background-color: blue;
+}
+
+.red * {
+    color: red;
+}
