@@ -249,3 +249,119 @@ document.querySelector(".title").style.fontSize = '16px'
 function toggleRedMode() {
 	document.querySelector('body').classList.toggle("red")
 }
+console.log("See the HTML page for the changes. The button has cool effects because of this section o.o \n \n")
+
+
+console.log('************ Promises ************')
+
+// Variables //
+
+const badEmailRef = document.querySelector(".badpractice");
+const goodEmailRef = document.querySelector(".goodpractice");
+const subRef = document.querySelector(".subscription");
+const freeUser = document.querySelector(".free");
+const vipUser = document.querySelector(".vip");
+const nonUser = document.querySelector(".none");
+
+// Then // 
+
+/* Not good pracitce to nest .then together, but worth seeing how the THEN method works. */
+fetch("https://jsonplaceholder.typicode.com/users/1").then(response => {
+	response.json().then(data => {
+	// The .json() method breaks down the json file from the backend into an object we can parse.
+	// Currently the promise is holding the data in response, but if we want the raw data then we
+		// use another promise to ask for the data from the response. 
+			// *** Basically there are two promises in this version
+		console.log(data)
+		badEmailRef.innerHTML = data.email;
+	})
+})
+
+/* Good practice */ 
+fetch("https://jsonplaceholder.typicode.com/users/1").then(response => {
+	return response.json();
+}).then(data => {
+	goodEmailRef.innerHTML = data.email;
+})
+
+
+// Async / Await //
+async function main() {
+	const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+	// The information we are receiving from the backend is still just a promise.
+		// To unlock the promise we do what we did before, use another promise to retrieve that one.
+		// Since we are already in an async function, why not just use another await. 
+			// ***if you wanted to you can use .then() at this point too. 
+	const data = await response.json();
+	console.log(data.email);
+
+}
+
+main();
+
+// Creating a promise //
+
+function getSubscriptionStatus() {
+	return new Promise ((resolve, reject) => {
+		const value = 1
+		if (value === 1) {
+			resolve("VIP")
+		} else {
+			reject("User Not Found.")
+		}
+	})
+}
+
+async function promiseTrial () {
+	console.log(await getSubscriptionStatus());
+}
+async function displayToHTML_SUB () {
+	const status = (await getSubscriptionStatus());
+	subRef.innerHTML = status;
+}
+
+promiseTrial();
+displayToHTML_SUB();
+
+
+// Exersize // 
+/* 
+	1) Create a function called getVideo
+	2) Accept a parameter called subscriptionStatus 
+	3) Return a new Promise inside of the function that:
+		-if VIP then show video
+		-if FREE then show trailer
+		-otherwise reject
+	4) Console log result to main.
+*/ 
+
+function getVideo (subscriptionStatus) {
+	return new Promise ((resolve, reject) => {
+		if (subscriptionStatus === "VIP") {
+			resolve("Show Video")
+		} else if (subscriptionStatus === "FREE"){
+			resolve("Show Trailer")
+		} else {
+			reject("Not Show Video")
+		}
+	})
+}
+
+getVideo("FREE").then(data => {
+	freeUser.innerHTML = data;
+	console.log(`Free User: ${data}`)
+})
+getVideo("VIP").then(data => {
+	vipUser.innerHTML = data;
+	console.log(`VIP User: ${data}`)
+})
+
+/* You must use a try catch / catch to get the error */
+
+getVideo("none").then(data => {
+	nonUser.innerHTML = data;
+	console.log(`Non User: ${data}`)
+}).catch(error => {
+	nonUser.innerHTML = error;
+	console.log(`Non User: ${error}`)
+	})

@@ -9,3 +9,11 @@
 .red * {
     color: red;
 }
+
+.user {
+    font-weight: 700;
+}
+
+.userlist span {
+    font-weight: 400;
+}
