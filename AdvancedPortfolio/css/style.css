@@ -69,6 +69,7 @@ button {
 
 .cyan--white {
     color: #00c5ca;
+    font-weight: 700;
 }
 
 .click {
@@ -323,6 +324,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position:relative;
 }
 
 .modal__about {
@@ -370,6 +372,10 @@ textarea {
     text-align: center;
 }
 
+.language__name.android-studio{
+    bottom: -40%;
+}
+
 .modal__language:hover .language__name {
     transform: scale(1);
 }
@@ -381,6 +387,50 @@ textarea {
 
 .modal__language--img {
     width: 100%;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__overlay--loading {
+    background-color: #c000c9;
+    position: absolute;
+    font-size: 80px;
+}
+
+.modal__overlay--success{
+    background-color: #01f9fd;
+    color: #171717;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.fa-spinner {
+    animation: loading 3s infinite ease-in-out;
+}
+
+.wobble {
+    animation: wobble 200ms infinite linear alternate-reverse;
+
+}
+
+@keyframes loading{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .modal__contact {
