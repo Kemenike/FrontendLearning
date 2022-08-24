@@ -74,6 +74,7 @@ button {
 
 .click {
     transition: all 200ms ease;
+    cursor: pointer;
 }
 
 .click:hover {
@@ -419,11 +420,6 @@ textarea {
     animation: loading 3s infinite ease-in-out;
 }
 
-.wobble {
-    animation: wobble 200ms infinite linear alternate-reverse;
-
-}
-
 @keyframes loading{
     0% {
         transform: rotate(0deg);
@@ -471,6 +467,15 @@ textarea {
     100% {
         transform: translateY(3%);
     }
+}
+
+.modal__exit {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color:white;
+    font-size: 34px;
+    z-index: 10;
 }
 
 /* Projects */
@@ -612,5 +617,3 @@ footer {
         transform: translateY(5%);
     }
 }
-
-1:45:10
