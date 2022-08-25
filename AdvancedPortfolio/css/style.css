@@ -29,6 +29,7 @@ li {
 
 section {
     background-color: #eeeeee;
+    transition: all 350ms ease;
 }
 
 .container {
@@ -134,6 +135,22 @@ input:focus, textarea:focus {
     border-color: #c000c9;
 }
 
+nav,
+.scroll,
+.header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
 label {
     font-size: 14px;
     font-weight: bold;
@@ -144,6 +161,73 @@ textarea {
     height: 100px;
     margin-top: 8px;
 }
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust,
+.dark-theme .header__para{
+    color: white;
+}
+
+.dark-theme .title--secondary {
+    color:#c000c9;
+}
+
+.dark-theme .header__para--bold,
+.dark-theme .cyan--white{
+    color:#01f9fd;
+}
+
+.dark-theme .mail__btn {
+    background-color: #c000c9;
+}
+
+.dark-theme section {
+    background-color: #171717;
+}
+
+.dark-theme .scroll__icon {
+    border-color: #fff;
+}
+
+.dark-theme .scroll__icon:after {
+    background-color: #fff;
+}
+
+.dark-theme .modal__about,
+.dark-theme input {
+    background-color: #424242;
+    color:#fff;
+}
+
+.dark-theme .modal__contact,
+.dark-theme textarea,
+.dark-theme input{
+    background-color: #c000c9;
+    color: #fff;
+}
+
+.dark-theme .form__submit {
+    color: #fff;
+    background-color: #171717;
+    border-color: #eeeeee;
+}
+
+.dark-theme input,
+.dark-theme textarea {
+    border-color: #fff;
+}
+
+.dark-theme input:hover,
+.dark-theme input:focus,
+.dark-theme textarea:hover,
+.dark-theme textarea:focus {
+    border-color: #171717;
+}
+
+
 
 /* Landing Page */ 
 
@@ -312,11 +396,17 @@ textarea {
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     border-radius: 20px;
     display: flex;
     overflow: hidden;
     z-index: 5;
+    visibility: hidden;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal--open .modal__about, 
+.modal--open .modal__contact {
+    transform: translateX(0%);
 }
 
 .modal__half {
@@ -326,6 +416,7 @@ textarea {
     flex-direction: column;
     justify-content: center;
     position:relative;
+    transition: all 300ms ease-in;
 }
 
 .modal__about {
@@ -334,6 +425,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: translateX(-110%);
 }
 
 .modal__title {
@@ -396,9 +488,10 @@ textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 }
 
 .modal__overlay--loading {
@@ -416,8 +509,20 @@ textarea {
     text-align: center;
 }
 
+.modal__overlay--visible {
+    z-index: 1;
+    display: flex;
+}
+
+.modal--open .modal{
+    z-index: 10;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
+}
+
+
 .fa-spinner {
-    animation: loading 3s infinite ease-in-out;
+    animation: loading 2s infinite linear;
 }
 
 @keyframes loading{
@@ -432,6 +537,7 @@ textarea {
 .modal__contact {
     background-color: #424242;
     color: #fff;
+    transform: translateX(110%);
 }
 
 .form__item {
