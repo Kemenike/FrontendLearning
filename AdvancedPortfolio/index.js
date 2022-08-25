@@ -3,6 +3,7 @@
 // dEJ1-829s7lAeNkfB
 let isModalOpen = false;
 let contrastToggle = false;
+const scaleFactor = 1/20;
 
 function contact (event) {
 
@@ -48,3 +49,17 @@ function toggleContrast() {
         document.body.classList.remove ('dark-theme');
     }
 }
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape");
+    let x = event.clientX * scaleFactor;
+    let y = event.clientY * scaleFactor;
+    
+    for(let i = 0; i < shapes.length; ++i)
+    {
+        const isOdd = i % 2 !== 0;
+        const oddArr = isOdd ? -1 : 1
+        shapes[i].style.transform = `translate(${x * oddArr}px, ${y * oddArr}px )`;
+    }
+}
+

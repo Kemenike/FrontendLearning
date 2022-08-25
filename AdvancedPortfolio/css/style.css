@@ -101,11 +101,11 @@ button {
 }
 
 .link__hover--effect--white:after {
-    background: linear-gradient(90deg, rgba(209,39,253,1) 16%, rgba(40,210,253,1) 84%);
+    background: rgba(40,210,253,1);
 }
 
 .link__hover--effect--black:after {
-    background: linear-gradient(90deg, rgba(40,210,253,1) 16%, rgba(209,39,253,1) 84%);
+    background: rgba(209,39,253,1);
 }
 
 .link__hover--effect:hover:after {
@@ -227,6 +227,11 @@ textarea {
     border-color: #171717;
 }
 
+.dark-theme .link__hover--effect--black:after,
+.dark-theme .link__hover--effect--white:after {
+    background: #01f9fd;
+}
+
 
 
 /* Landing Page */ 
@@ -270,7 +275,7 @@ textarea {
 }
 
 .mail__btn {
-    position: absolute;
+    position: fixed;
     width: 70px;
     height: 70px;
     font-size: 32px;
@@ -722,4 +727,46 @@ footer {
         left: 0;
         transform: translateY(5%);
     }
+}
+
+/* Shapes */
+.shape{
+    position: fixed;
+}
+
+.shape--0 {
+    top: 15vh;
+    left: 5vw;
+}
+.shape--1 {
+    top: 15vh;
+    left: 50vw;
+}
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+}
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+}
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+}
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+}
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+}
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+}
+.shape--8 {
+    top: 80vh;
+    left: 80vw;
 }
