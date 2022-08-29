@@ -62,4 +62,3 @@ function moveBackground(event) {
         shapes[i].style.transform = `translate(${x * oddArr}px, ${y * oddArr}px )`;
     }
 }
-

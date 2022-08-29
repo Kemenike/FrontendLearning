@@ -285,6 +285,7 @@ textarea {
     color: #171717;
     bottom: 32px;
     right: 40px;
+    z-index: 1;
 }
 
 .scroll {
@@ -347,28 +348,28 @@ textarea {
 
 .logo__wrapper {
     position: relative;
+    top: 0;
+    left: 0;
     display: flex;
     margin: 0 auto;
     overflow: visible;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 150px;
-    top: 0;
-    left: 0;
 }
 
 .logo__layer1 {
     position:absolute;
     width: 100%;
-    height: width;
 }
 
 .logo__layer2 {
     position: absolute;
     object-fit: scale-down;
     width: 100%;
-    height: width;
-    top: 50%;
-    left: 50%;
+    top: 0%;
+    left: 0%;
     transform: translate(-50%, -50%);
     z-index: 1;
 }
@@ -717,14 +718,10 @@ footer {
 
 @keyframes astro__hover {
     0% {
-        top: 0;
-        left: 0;
         transform: translateY(-5%);
     }
 
     100% {
-        top: 0;
-        left: 0;
         transform: translateY(5%);
     }
 }
@@ -769,4 +766,78 @@ footer {
 .shape--8 {
     top: 80vh;
     left: 80vw;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 80px;
+    }
+
+    .header__para {
+        font-size: 20px; 
+    }
+
+    .modal {
+        top: 0;
+        left: 0;
+        transform: none;
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half {
+        width: 100%;
+    }
+
+    .project__description {
+        left: 0;
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 600px){
+    .logo__layer1 {
+        content: url("../assets/KE_Transparent--Logo.svg");
+        animation: astro__hover 4s infinite alternate-reverse;
+    }
+
+    .logo__layer2 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 52px;
+    }
+
+    .header__para {
+        font-size: 18px;
+    }
+
+    .nav__link:first-child {
+        display: none;
+    }
+
+    .project__description--para {
+        display: none;
+    }
+
+    .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--sub-title {
+        margin-bottom: 8px;
+    }
+
+    .modal__half {
+        padding: 40px
+    }
+
 }
