@@ -37,7 +37,11 @@ header {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    background: #511281;
+    background: rgb(33,9,78);
+    background: linear-gradient(180deg, rgba(33,9,78,1) 0%,
+         rgba(81,18,129,1) 35%,
+         rgba(76,161,163,1) 65%,
+         rgba(165,225,173,1) 100%);
 }
 
 ::placeholder {
@@ -50,6 +54,7 @@ header {
     text-align: center;
     font-size: min(4vw, 32px);
     background-color: #fff;
+    box-shadow: 2px 2px 8px #000;
     height: 5vw;
     min-height: 32px;
     max-width: 800px;
@@ -59,11 +64,13 @@ header {
     /* box-shadow: 0 0 4px black; */
 }
 
+/* The Cards */
+
 .champ_search {
     margin-bottom: 128px;
 }
 
-.search__results {
+.champions {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -71,10 +78,55 @@ header {
     flex-wrap: wrap;
 }
 
-.result {
-    width: 350px;
-    height: 550px;
+.champion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 600px;
     color: white;
     border: 5px solid #fff;
+    border-radius: 10px;
+    background-color: #555;
+    padding: 4px;
+    box-shadow: 2px 2px 8px #000;
     margin: 20px 40px;
+}
+
+.champion-name {
+    margin-top: 16px;
+    padding: 4px;
+    width: 100%;
+    height: auto;
+    font-size: 32px;
+    text-align: center;
+    color: #eee;
+}
+
+.champion_sub-name {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.champion_background {
+    border: 4px solid #eee;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #000;
+    width: 100px;
+    height: 100px;
+    margin-top: 16px;
+}
+
+.details__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+    margin: 24px 12px 0 12px;
+    padding: 12px;
+}
+
+.stat__wrapper {
+    display: flex;
+    flex-direction: row;
 }
