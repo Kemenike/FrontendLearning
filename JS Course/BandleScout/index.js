@@ -25,33 +25,41 @@ function cardHTML(champion) {
             <img src="./assets/champion/${champion.name.replace(/ |\.|\'|\&/g, "")}.png" alt="" class="champion_background">
         </figure>
         <div class="details__wrapper">
-        <div class="details__wrapper">
-        <div class="health_stat">
-            <figure>
-                <img src="" alt="" class="health__icon">
-            </figure>
-        </div>
-        <div class="attack_speed_stat">
-            <figure>
-                <img src="./assets/StatMods/StatModsAttackSpeedIcon.png" alt="" class="health__icon">
-            </figure>
-        </div>
-        <div class="defence_stat">
-            <figure>
-                <img src="./assets/StatMods/StatModsArmorIcon.png" alt="" class="health__icon">
-            </figure>
-        </div>
-        <div class="magic_stat">
-            <figure>
-                <img src="./assets/StatMods/StatModsAdaptiveForceIcon.png" alt="" class="health__icon">
-            </figure>
-        </div>
-        <div class="resistance_stat">
-            <figure>
-                <img src="./assets/StatMods/StatModsMagicResIcon.MagicResist_Fix.png" alt="" class="health__icon">
-            </figure>
-        </div>
-    </div>
+                    <div class="health_stat">
+                        <figure class="stat__wrapper">
+                            <img src="./assets//StatMods/StatModsHealthScalingIcon.png" alt="" class="health__icon">
+                        </figure>
+                    </div>
+                    <div class="magic_stat">
+                        <figure class="stat__wrapper">
+                            <img src="./assets/StatMods/StatModsAdaptiveForceIcon.png" alt="" class="health__icon">
+                        </figure>
+                    </div>
+                    <div class="attack_speed_stat">
+                        <figure class="stat__wrapper">
+                            <img src="./assets/StatMods/StatModsAttackSpeedIcon.png" alt="" class="health__icon">
+                            <p class="stat"><span class="stat_per_level"></span></p>
+                        </figure>
+                    </div>
+                    <div class="cooldown_reduction_stat">
+                        <figure class="stat__wrapper">
+                            <img src="./assets/StatMods/StatModsCDRScalingIcon.png" alt="" class="health__icon">
+                            <p class="stat"><span class="stat_per_level"></span></p>
+                        </figure>
+                    </div>
+                    <div class="defence_stat">
+                        <figure class="stat__wrapper">
+                            <img src="./assets/StatMods/StatModsArmorIcon.png" alt="" class="health__icon">
+                            <p class="stat"><span class="stat_per_level"></span></p>
+                        </figure>
+                    </div>
+                    <div class="resistance_stat">
+                        <figure class="stat__wrapper">
+                            <img src="./assets/StatMods/StatModsMagicResIcon.MagicResist_Fix.png" alt="" class="health__icon">
+                        </figure>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     `
