@@ -118,22 +118,20 @@ function getRandomSplash(skinList) {
 function showRoles(championtags) {
     if(championtags.length === 1) {
         return `
-            <p class="role1">${championtags[0]}</p>
+            <p class="role">${championtags[0]}</p>
         `;
     } else {
         return `
-            <p class="role1">${championtags[0]}, ${championtags[1]}</p>
+            <p class="role">${championtags[0]}, ${championtags[1]}</p>
         `;
     }
 }
 
-function renderCards(allChamps, filter) {
-    if(!filter) {
-        for(let key in allChamps) {
-            champResults.innerHTML += cardHTML(allChamps[key]);
-            document.querySelector(`.${allChamps[key].id}`)
-                .style.background = `rgba(0, 0, 0, 0.6) url("../assets/centered/${allChamps[key].id}_${getRandomSplash(allChamps[key].skins)}.jpg") no-repeat center/305%`;
-        }
+function renderCards(allChamps) {
+    for(let key in allChamps) {
+        champResults.innerHTML += cardHTML(allChamps[key]);
+        document.querySelector(`.${allChamps[key].id}`)
+            .style.background = `rgba(0, 0, 0, 0.6) url("../assets/centered/${allChamps[key].id}_${getRandomSplash(allChamps[key].skins)}.jpg") no-repeat center/305%`;
     }
 }
 
@@ -141,4 +139,4 @@ getCards();
 
 setTimeout(() => {
     renderCards(champList, );
-}, 10);
+}, 1000);
