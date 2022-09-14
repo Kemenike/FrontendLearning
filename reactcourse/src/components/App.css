@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+
+.todo {
+  border: 1px solid black;
+  padding: 16px;
+  width: calc(100%/3);
+}
+
+.todo__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
