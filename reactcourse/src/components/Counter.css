@@ -1,0 +1,9 @@
+.counter__wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 16px;
+}
+
+.btn {
+    margin: 16px;
+}

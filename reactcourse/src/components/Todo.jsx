@@ -3,7 +3,7 @@ function Todo(props) {
         <div className="todo">
             <h3>{props.title}</h3>
             <p>{props.para}</p>
-            <button className="btn btn__delete">Delete</button>
+            <button onClick={() => { console.log('Clicked');}}>Delete</button>
         </div>
     );
 
