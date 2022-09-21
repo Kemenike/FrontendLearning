@@ -250,10 +250,10 @@ header {
 
 .header__img--wrapper {
   padding: 20px;
-  z-index: 50;
-  max-height: 50vh;
+
   /* Added this after the tutorial to 
   show it over the wave on larger screens */
+  z-index: 50;
   
   /* Added this after the tutorial to 
   make landing page responsive on laptops */
@@ -369,7 +369,7 @@ FEATURES
 .books {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 24px;
+  margin: 0 -24px;
 }
 
 .book {
