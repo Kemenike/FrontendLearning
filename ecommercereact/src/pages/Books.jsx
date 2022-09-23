@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollToTop from '../components/ScrollToTop';
 import Book from '../components/ui/Book';
 
 const Books = ({ books: initialBooks }) => {
@@ -52,6 +53,7 @@ const Books = ({ books: initialBooks }) => {
                     </div>
                 </section>
             </main>
+            <ScrollToTop />
         </div>
     );
 }

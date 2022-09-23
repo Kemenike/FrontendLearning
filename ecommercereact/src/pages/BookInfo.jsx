@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import ScrollToTop from '../components/ScrollToTop';
 import Book from '../components/ui/Book';
 import Price from '../components/ui/Price';
 import Rating from '../components/ui/Rating';
@@ -82,6 +83,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
                     </div>
                 </div>
             </main>
+            <ScrollToTop />
         </div>
     );
 }
