@@ -1,9 +1,9 @@
-function Todo(props) {
+function Todo({title, onTodoDelete}) {
     return (
         <div className="todo">
-            <h3>{props.title}</h3>
-            <p>{props.para}</p>
-            <button onClick={() => { console.log('Clicked');}}>Delete</button>
+            <h3>{title}</h3>
+            <p>{null}</p>
+            <button onClick={onTodoDelete}>Delete</button>
         </div>
     );
 

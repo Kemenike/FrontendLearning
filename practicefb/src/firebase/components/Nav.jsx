@@ -15,7 +15,7 @@ const Nav = ({ login, register, logout, user }) => {
                 <h1 className='title'>Placeholder Title</h1>
                 </div> 
                 <div className="nav__links">
-                    {user  
+                    {user === {} 
                         ? <>
                             <button className="signout btn" onClick={logout}>
                                 {user.email ? user.email[0].toUpperCase() : null}

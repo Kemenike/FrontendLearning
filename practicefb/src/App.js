@@ -1,10 +1,20 @@
 import React from 'react';
-import { auth } from './firebase/init'
+import { auth, db } from './firebase/init';
+import { collection, addDoc } from 'firebase/firestore';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged} from 'firebase/auth';
 import './App.css';
 import Nav from './firebase/components/Nav';
 
 function App() {
+
+  function createPost() {
+    const post = {
+      title: "Land a fantastic job.",
+      description: "Starting a family too.",
+    }
+    addDoc(collection(db, "posts"), post);
+  }
+
   const [user, setUser] = React.useState({});
 
   const [loading, setLoading] = React.useState(true);
@@ -49,6 +59,7 @@ function App() {
   return (
     <div className="App">
       <Nav login={login} logout={logout} register={register} user={user}/>
+      <button onClick={createPost}>Create Post</button>
     </div>
   );
 }
