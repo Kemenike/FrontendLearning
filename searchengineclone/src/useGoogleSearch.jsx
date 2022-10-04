@@ -5,14 +5,13 @@ const CONTEXT_KEY = '00dbca360b3da6dde';
 
 //Custom Hook
 
-const useGoogleSearch = (term) => {
+const UseGoogleSearch = (term) => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
         const fetchData = async() => {
-
             fetch (
-                `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${term}`
+                `https://googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q${term}`
             )
             .then(response => response.json())
             .then(result => {
@@ -25,4 +24,4 @@ const useGoogleSearch = (term) => {
     return { data };
 }
 
-export default useGoogleSearch;
+export default UseGoogleSearch;

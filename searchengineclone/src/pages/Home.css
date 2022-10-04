@@ -6,7 +6,7 @@
 
 .home__header{
     display: flex;
-    padding: 16px;
+    padding: 20px 30px;
     justify-content: space-between;
     align-items: center;
 }
@@ -36,16 +36,11 @@
 .home__body {
     flex: 1;
     display: flex;
+    margin-top: 10%;
     flex-direction: column;
-    margin-top: 10% ;
 }
 
 .home__body > img {
     object-fit: contain;
     height: 92px;
-}
-
-.home__footer {
-    height: 50px;
-    width: 100%;
 }
