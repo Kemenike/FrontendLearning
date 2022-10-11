@@ -15,7 +15,7 @@ searchInput.addEventListener("input", (e) => {
 
 
 async function getCards() {
-    const result = await fetch ('http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/championFull.json');
+    const result = await fetch ('http://ddragon.leagueoflegends.com/cdn/12.18.1/data/en_US/championFull.json');
     await result.json().then(element => {
         champList = element.data;
     });
