@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'BeaufortForLol', 'Spiegel', sans-serif;
+}
+
+@font-face {
+  font-family: BeaufortForLol;
+  src: url(./fonts/BeaufortForLoL-OTF/BeaufortforLOL-Heavy.otf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: BeaufortForLol;
+  src: url(./fonts/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Spiegel;
+  src: url(./fonts/Spiegel-OTF/Spiegel-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Spiegel;
+  src: url(./fonts/Spiegel-OTF/Spiegel-Regular.otf);
+}
+
+.app {
+  height: 100vh;
+  width: auto;
+  background-color: #242424;
+}

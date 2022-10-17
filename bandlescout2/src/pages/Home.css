@@ -1,0 +1,68 @@
+::placeholder {
+    color: #A09B8C;
+}
+
+.home {
+    height: auto;
+    width: auto;
+    color: white;
+}
+
+.home__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+.title {
+    color: white;
+    font-weight: 900;
+    font-size: 120px;
+}
+
+.search__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px 36px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.search_bar {
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 800px;
+    font-family: 'BeaufortForLol';
+    color: #C89B3C;
+    background: #010A13;
+    border: none;
+    border-radius: 100px;
+    outline: 1px solid #C8AA6E;
+    text-align: center;
+    font-size: 40px;
+    height: 40px;
+}
+
+.button__container {
+    display: flex;
+    width: 80%;
+    max-width: 880px;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.btn {
+    cursor: pointer;
+    font-family: 'BeaufortForLol';
+    font-weight: 500;
+    font-size: 24px;
+    height: 40px;
+    padding: 0 16px;
+    min-width: 150px;
+    border: 1px solid #C8AA6E;
+    border-radius: 100px;
+    color: #C89B3C;
+    background: #010A13;
+}
