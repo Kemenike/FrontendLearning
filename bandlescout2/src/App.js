@@ -1,9 +1,9 @@
 import "./App.css";
 import React from "react";
-import Search from './pages/Search';
 import Home from './pages/Home';
 import ChampionInfo from './pages/ChampionInfo';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Search from "./pages/Search";
 
 function App() {
   return (
