@@ -2,7 +2,6 @@ import React from 'react';
 import './SearchPage.css'
 import { useStateValue } from '../StateProvider';
 import useGoogleSearch from '../useGoogleSearch';
-// import Response from '../response';
 import { Link } from 'react-router-dom';
 import Search from '../components/Search';
 import SearchIcon from '@mui/icons-material/Search';
@@ -22,10 +21,15 @@ const SearchPage = () => {
     //Local File - Mock API call for testing
     // const data = Response;
     console.log('data = ', data);
+
     
     return (
         <div className='search_page'>
             <div className="search_page__header">
+                <h1>{term}</h1>
+            </div>
+            <div className="search_page__results">
+            </div>
                 <Link to='/'>
                     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" className="search_page__logo" />
                 </Link>

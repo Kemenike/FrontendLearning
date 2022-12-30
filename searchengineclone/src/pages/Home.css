@@ -36,8 +36,8 @@
 .home__body {
     flex: 1;
     display: flex;
+    margin-top: 10%;
     flex-direction: column;
-    margin-top: 10% ;
 }
 
 .home__body > img {
