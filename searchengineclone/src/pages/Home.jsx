@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom'
 import AppsIcon from '@mui/icons-material/Apps'
 import { Avatar } from '@mui/material';
 import Search from '../components/Search';
+import './Home.css';
+import { Link } from 'react-router-dom';
+import AppsIcon from '@mui/icons-material/Apps';
+import { Avatar } from '@mui/material';
+import Search from '../components/Search';
+import Footer from '../components/Footer';
 
 const Home = () => {
 	return (
@@ -29,6 +35,10 @@ const Home = () => {
 					<Search />
 				</div>
 			</div>
+			<div className="home__footer">
+				<Footer />
+			</div>
+
 		</div>
 	);
 }

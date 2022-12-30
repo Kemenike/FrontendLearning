@@ -6,7 +6,7 @@
 
 .home__header{
     display: flex;
-    padding: 20px 30px;
+    padding: 16px;
     justify-content: space-between;
     align-items: center;
 }
@@ -43,4 +43,9 @@
 .home__body > img {
     object-fit: contain;
     height: 92px;
+}
+
+.home__footer {
+    height: 50px;
+    width: 100%;
 }
